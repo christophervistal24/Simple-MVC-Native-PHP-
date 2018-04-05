@@ -5,7 +5,7 @@ class Controller
         public function model($model)
         {
 
-            $file = '../app/model/' . $model . '.php';
+            $file = 'app/model/' . $model . '.php';
             if(file_exists($file)){
                 require_once $file;
                 return new $model;
@@ -17,7 +17,7 @@ class Controller
         //calling the page
         public function views($view,$data = [])
         {
-            $file = '../app/views/' . $view . '.php';
+            $file = 'app/views/' . $view . '.php';
             (file_exists($file)) ? require_once $file : '';
         }
 
